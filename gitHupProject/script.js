@@ -19,10 +19,14 @@ let htmlQush = function (data, array) {
       <div class="repo following">Following:${data.following}</div>
     </div>
     <div class="statistika__1">
-      <p class="company">Company:${data.company}</p>
-      <p class="company">Website/Blog: ${data.blog}</p>
-      <p class="company">Location: ${data.location}</p>
-      <p class="company">Member Since: ${data.created_at}</p>
+      <p class="company">Company:${data.company ? data.company : "nomalum"}</p>
+      <p class="company">Website/Blog: ${data.blog ? data.blog : "nomalum"}</p>
+      <p class="company">Location: ${
+        data.location ? data.location : "nomalum"
+      }</p>
+      <p class="company">Member Since: ${
+        data.created_at ? data.created_at : "nomalum"
+      }</p>
     </div>
   </div>
 </section>`;
@@ -44,16 +48,23 @@ let htmlQush = function (data, array) {
       .insertAdjacentHTML("afterbegin", htmlgaQush);
   }
 };
-document.querySelector("#fname").addEventListener("keyup", (e) => {
-  let uzgaruvchi = search.value;
-  gitHUb(uzgaruvchi);
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    let uzgaruvchi = search.value;
+    gitHUb(uzgaruvchi);
+  }
 });
 const gitHUb = async function (name) {
-  let ol = await fetch(`https://api.github.com/users/${name}`);
+  let ol = await fetch(
+    `https://api.github.com/users/${name}?client_id=65b44d46d520be1f19c7&client_secret=7287ef205413001a79b30f0fbcc04416153ef797`
+  );
   let kodniOch = await ol.json();
   let data = kodniOch;
   // console.log(kodniOch);
-  let reponiOl = await fetch(`https://api.github.com/users/${name}/repos`);
+  let reponiOl = await fetch(
+    `
+      https://api.github.com/users/${name}/repos?per_page=created: asc&sort=5&client_id=65b44d46d520be1f19c7&client_secret=7287ef205413001a79b30f0fbcc04416153ef797`
+  );
   let och = await reponiOl.json();
   // console.log(och);
   htmlQush(data, och);

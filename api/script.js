@@ -107,34 +107,62 @@ function renderHtml(data, className) {
 // });
 
 // tanga.then(res => console.log(res));
-let chegaraniOl = function () {
-  return new Promise(function (resolve, reject) {
-    navigator.geolocation.getCurrentPosition(
-      e => {
-        e.coords;
-      },
-      er => {
-        return er;
-      }
-    );
-  });
-};
+// let chegaraniOl = function () {
+//   return new Promise(function (resolve, reject) {
+//     navigator.geolocation.getCurrentPosition(
+//       e => {
+//         e.coords;
+//       },
+//       er => {
+//         return er;
+//       }
+//     );
+//   });
+// };
 
-console.log(chegaraniOl());
+// console.log(chegaraniOl());
 
-const data = async function () {
-  try {
-    let data2 = await fetch('https://restcountries.com/v2/name/uzbekistan');
-    let [JsonData] = await data2.json();
-    console.log(JsonData);
-    renderHtml(JsonData);
-    let qushni = JsonData.borders[2];
-    let qushni1 = await fetch(`https://restcountries.com/v2/alpha/${qushni}`);
-    let sana = await qushni1.json();
-    renderHtml(sana, 'neighbour');
-  } catch (error) {
-    console.log(error);
-    alert(error);
-  }
+// const data = async function () {
+//   try {
+//     let data2 = await fetch('https://restcountries.com/v2/name/uzbekistan');
+//     let [JsonData] = await data2.json();
+//     console.log(JsonData);
+//     renderHtml(JsonData);
+//     let qushni = JsonData.borders[2];
+//     let qushni1 = await fetch(`https://restcountries.com/v2/alpha/${qushni}`);
+//     let sana = await qushni1.json();
+//     renderHtml(sana, 'neighbour');
+//   } catch (error) {
+//     console.log(error);
+//     alert(error);
+//   }
+// };
+// data();
+
+let asyncFunc = async function () {
+  // console.time('sana');
+  // let chiqar = await fetch('https://restcountries.com/v2/name/uzbekistan');
+  // let dataJson = await chiqar.json();
+  // let chiqar1 = await fetch('https://restcountries.com/v2/name/usa');
+  // let dataJson1 = await chiqar1.json();
+  // let chiqar2 = await fetch('https://restcountries.com/v2/name/urugvay');
+  // let dataJson2 = await chiqar2.json();
+  // console.log(dataJson, dataJson1, dataJson2);
+  // console.timeEnd('sana');
+  let timeOut1 = function (sekund) {
+    return new Promise(function (resolve) {
+      setTimeout(() => {
+        resolve('sizning internetingiz sekin');
+      }, sekund * 1000);
+    });
+  };
+  let data = Promise.all([
+    fetch('https://restcountries.com/v2/name/uzbekistan'),
+    fetch('https://restcountries.com/v2/name/usa'),
+    fetch('https://restcountries.com/v2/name/russia'),
+  ]);
+  console.timeEnd('sana');
+  let data1 = await Promise.race([data, timeOut1(0.1)]);
+  console.log(data1);
 };
-data();
+asyncFunc();
