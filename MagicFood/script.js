@@ -39,14 +39,14 @@ document.querySelector(".search_1").addEventListener("click", (e) => {
             <p class="name_popup">${a.strMeal}</p>
             <p class="ins">Instruduction</p>
             <p class="popup_about1">
-             ${a.strInstructions}
+            ${a.strInstructions}
             </p>
             <img src="${a.strMealThumb}" alt="" />
             <a href="${a.strYoutube}" class="popup_a">Watch Video</a>
           </div>
         </div>`;
               document
-                .querySelector(".qidiruv_natijalari")
+                .querySelector(".popular")
                 .insertAdjacentHTML("beforeend", popupQush);
               console.log(a);
               document.querySelector(".x").addEventListener("click", (e) => {
