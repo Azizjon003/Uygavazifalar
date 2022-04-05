@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  height: 100vh;
+  background-color: #81caf5;
+}
+main {
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  min-width: 60vw;
+  background-color: yellowgreen;
+  align-items: center;
+}
+main div {
+  height: 10rem;
+  margin-top: 5rem;
+  border: 2px solid green;
+  min-width: 20rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.4rem;
+  padding-top: 5rem;
+}
+.form {
+  display: flex;
+  gap: 5rem;
+}
+.form input {
+  display: inline;
+  height: 3rem;
+  outline: none;
+}
+.form button {
+  width: 10rem;
+}
+.teng {
+  border: none;
+}
+.plus {
+  border: none;
+}
+.one_qushiluvchi {
+  font-size: 4rem;
+}
+.vaqt {
+  height: 1rem;
+  width: 10rem;
+  background-color: crimson;
+  border-radius: 10px;
+}

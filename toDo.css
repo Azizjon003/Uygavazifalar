@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #a5d5df;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15rem;
+}
+main {
+  background-color: #5b5aaa;
+  width: 60vw;
+  min-height: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 5rem 0;
+  gap: 5rem;
+}
+form {
+  display: flex;
+  gap: 1rem;
+  /* width: 100%; */
+}
+input {
+  display: inline-block;
+  width: 35rem;
+  height: 3rem;
+  outline: none;
+}
+button {
+  display: inline-block;
+  width: 15rem;
+}
+.qoshilgan {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 40rem;/ */
+  align-items: center;
+  font-size: 1.8rem;
+}
+.delete {
+  padding: 1rem;
+  background-color: crimson;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .sonlar {
+        display: flex;
+        /* gap: 2rem; */
+      }
+      div {
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ciziq {
+        height: 5px;
+        width: 30px;
+        background-color: grey;
+        transition: 0.1s all;
+        transition-delay: 0.1s;
+      }
+      .aylana {
+        width: 5rem;
+        height: 5rem;
+        border: 5px solid grey;
+        border-radius: 50%;
+        transition: 0.1s all;
+        /* padding: 1rem 2rem; */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sonlar">
+      <div>
+        <span class="aylana aylana1">1</span>
+        <span class="ciziq aylana1"> </span>
+      </div>
+      <div>
+        <span class="aylana aylana1">2</span>
+        <span class="ciziq aylana1"> </span>
+      </div>
+      <div>
+        <span class="aylana aylana1">3</span>
+        <span class="ciziq aylana1"> </span>
+      </div>
+      <div>
+        <span class="aylana aylana1">4</span> <span class="aylana1"> </span>
+      </div>
+    </section>
+
+    <button class="Prev">Prev</button>
+    <button class="Next">Next</button>
+    <script src="./start.js"></script>
+  </body>
+</html>
