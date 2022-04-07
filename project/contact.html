@@ -28,10 +28,7 @@
     <title>Document</title>
   </head>
 
-  <body
-    id="contactusBody"
-    onload=" if (document.contact_us){ if (document.contact_us.contactname) {document.contact_us.contactname.focus()} };"
-  >
+  <body id="contactusBody">
     <!-- ========== HEADER ========== -->
 
     <div id="header">
@@ -39,12 +36,8 @@
         <div class="main-width">
           <div class="logo">
             <!-- ========== LOGO ========== -->
-            <a href="http://www.kibmall.com/index.php?main_page=index"
-              ><img
-                src="includes/templates/theme855/images/logo.jpg"
-                alt=""
-                width="234"
-                height="180"
+            <a href="index.html"
+              ><img src="images/logo.jpg" alt="" width="234" height="180"
             /></a>
             <!-- ========================== -->
           </div>
@@ -53,7 +46,7 @@
             <div id="navEZPagesTop">
               <ul>
                 <li class="first">
-                  <a href="http://www.kibmall.com/index.php?main_page=index">
+                  <a href="index.html">
                     <span class="corner"></span>
                     <span>
                       <span>Home</span>
@@ -62,9 +55,7 @@
                 </li>
 
                 <li class="  ">
-                  <a
-                    href="http://www.kibmall.com/index.php?main_page=products_new"
-                  >
+                  <a href="newProducts.html">
                     <span class="corner"></span>
                     <span>
                       <span>New products</span>
@@ -73,7 +64,7 @@
                 </li>
 
                 <li class="  ">
-                  <a href="http://www.kibmall.com/index.php?main_page=specials">
+                  <a href="special.html">
                     <span class="corner"></span>
                     <span>
                       <span>Specials</span>
@@ -82,9 +73,7 @@
                 </li>
 
                 <li class="  ">
-                  <a
-                    href="http://www.kibmall.com/index.php?main_page=products_all"
-                  >
+                  <a href="allproducts.html">
                     <span class="corner"></span>
                     <span>
                       <span>All products</span>
@@ -93,7 +82,7 @@
                 </li>
 
                 <li class="  ">
-                  <a href="http://www.kibmall.com/index.php?main_page=reviews">
+                  <a href="review.html">
                     <span class="corner"></span>
                     <span>
                       <span>Reviews</span>
@@ -102,9 +91,7 @@
                 </li>
 
                 <li class="selected">
-                  <a
-                    href="http://www.kibmall.com/index.php?main_page=contact_us"
-                  >
+                  <a href="contact.html">
                     <span class="corner"></span>
                     <span>
                       <span>Contacts</span>
@@ -113,7 +100,7 @@
                 </li>
 
                 <li class="last">
-                  <a href="http://www.kibmall.com/index.php?main_page=gv_faq">
+                  <a href="FAQs.html">
                     <span class="corner"></span>
                     <span>
                       <span>FAQs</span>
@@ -139,7 +126,7 @@
             <a
               href="http://www.kibmall.com/index.php?main_page=contact_us&amp;language=en"
               ><img
-                src="includes/languages/english/images/icon.gif"
+                src="images/icon.gif"
                 alt="English"
                 title=" English "
                 width="20"
@@ -265,6 +252,7 @@
                           name="contact_us"
                           action="http://www.kibmall.com/index.php?main_page=contact_us&amp;action=send"
                           method="post"
+                          class="form_container"
                         >
                           <input
                             type="hidden"
@@ -317,30 +305,29 @@
                               id="enquiry"
                             ></textarea>
                           </fieldset>
-
-                          <div class="buttonRow forward">
-                            <input
-                              class="cssButton submit_button button button_send"
-                              onmouseover="this.className='cssButtonHover  button_send button_sendHover'"
-                              onmouseout="this.className='cssButton submit_button button  button_send'"
-                              type="submit"
-                              value="Send Now"
-                            />
-                          </div>
-                          <div class="buttonRow back">
-                            <a
-                              href="http://www.kibmall.com/index.php?main_page=reviews"
-                              ><span
-                                class="cssButton normal_button button button_back"
-                                onmouseover="this.className='cssButtonHover normal_button button  button_back button_backHover'"
-                                onmouseout="this.className='cssButton normal_button button  button_back'"
-                                >&nbsp;Back&nbsp;</span
-                              ></a
-                            >
+                          <div class="buttonsflex">
+                            <div class="buttonRow forward">
+                              <input
+                                class="cssButton submit_button button button_send"
+                                onmouseover="this.className='cssButtonHover  button_send button_sendHover'"
+                                onmouseout="this.className='cssButton submit_button button  button_send'"
+                                type="submit"
+                                value="Send Now"
+                              />
+                            </div>
+                            <div class="buttonRow back">
+                              <a
+                                href="http://www.kibmall.com/index.php?main_page=reviews"
+                                ><span
+                                  class="cssButton normal_button button button_back"
+                                  onmouseover="this.className='cssButtonHover normal_button button  button_back button_backHover'"
+                                  onmouseout="this.className='cssButton normal_button button  button_back'"
+                                  >&nbsp;Back&nbsp;</span
+                                ></a
+                              >
+                            </div>
                           </div>
                         </form>
-
-                        <div class="clear"></div>
                       </div>
                     </div>
                   </div>

@@ -1299,3 +1299,27 @@ textarea:focus {
 li {
   background-color: #3fbdf7;
 }
+address {
+  height: 200px;
+}
+.buttonsflex {
+  display: flex;
+  justify-content: space-between;
+}
+.form_container {
+  width: 800px;
+}
+.flex_cannn {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

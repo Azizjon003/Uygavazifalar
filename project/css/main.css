@@ -1335,3 +1335,7 @@ input#state {
   font-size: 17px;
   font-weight: 500;
 }
+.tie-indent {
+  display: flex;
+  gap: 3rem;
+}
