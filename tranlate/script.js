@@ -13,6 +13,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((response) => {
+    console.log(response);
     let data = response.data.languages;
     for (let key of data) {
       let optin = `<option value="${key.language}">${key.language}</option>`;
@@ -47,6 +48,7 @@ document.querySelector(".run__btn").addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((response) => {
+      console.log(response);
       document.querySelector(".to__input").value =
         response.data.translations[0].translatedText;
     });
