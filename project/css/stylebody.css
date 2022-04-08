@@ -1323,3 +1323,6 @@ address {
   flex-direction: column;
   gap: 10px;
 }
+.name {
+  margin-left: -50px;
+}
